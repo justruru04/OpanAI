@@ -1,3 +1,7 @@
+"""
+將 Document 物件 splitting 成 chunks
+"""
+
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
