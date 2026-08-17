@@ -19,11 +19,10 @@ def get_split_documents(file_path: str, encoding = 'utf-8') -> list[Document]:
     split_docs = text_splitter.split_documents(raw_docs)
     return split_docs
 
-chunks = get_split_documents("data/Mimikyu.txt")
-
-
 
 if __name__ == "__main__":
+    chunks = get_split_documents("data/Mimikyu.txt")
+
     print(f"總共有 {len(chunks)} 個 chunks")
     print("第一個 chunk 內容：", chunks[0].page_content)
     print("第一個 chunk metadata：", chunks[0].metadata)
