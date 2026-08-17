@@ -10,10 +10,10 @@ split_docs = get_split_documents("data/Mimikyu.txt")
 embeddings = OpenAIEmbeddings(model='text-embedding-3-small')
 
 vectorstore = Chroma.from_documents(
-    documents=split_docs,
-    embedding=embeddings,
-    persist_directory='./chroma_db',
-    collection_name='pokemon_mimikyu'
+    documents = split_docs,
+    embedding = embeddings,
+    persist_directory = './chroma_db',
+    collection_name = 'pokemon_mimikyu'
 )
 
 print(f"\n文件向量化已完成，{len(split_docs)} 個 chunks 已儲存至 ChromaDB")
@@ -24,7 +24,7 @@ similar_docs = vectorstore.similarity_search(query, k=2) # k=2 代表取最相�
 
 print(f"針對問題『{query}』找到的相關文件：")
 for i, doc1 in enumerate(similar_docs):
-    print(f"\n結果 {i+1} 來源: {doc1.metadata['source']})")
+    print(f"\n結果 {i+1} 來源: {doc1.metadata['source']}")
     print(f"內文: {doc1.page_content}")
 
 
