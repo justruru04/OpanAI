@@ -52,7 +52,6 @@ def predict(message, history):
 
 demo = gr.ChatInterface(
     fn = predict,
-    type = "messages",  # 使用標準 messages 格式
     title = "「茶茶飲料店」線上點餐服務",
     description = "歡迎光臨！我是您的訂餐小助手「小茶」，請問今天想要喝點什麼呢？",
     examples = ["菜單資訊", "人氣推薦"]

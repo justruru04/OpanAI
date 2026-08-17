@@ -1,3 +1,7 @@
+"""
+ 建構基本 AI Agent 與練習架設 tools 供 AI 在處理資料中使用
+"""
+
 from dotenv import load_dotenv
 from langchain_core.tools import tool
 from langchain_openai import ChatOpenAI

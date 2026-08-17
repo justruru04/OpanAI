@@ -1,3 +1,7 @@
+"""
+透過 RunnableBranch，打造類似 if-else 支線，可根據不同的分類使用對應的鏈
+"""
+
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser

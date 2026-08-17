@@ -1,3 +1,7 @@
+"""
+利用 Sequential Process 將文本翻譯成中文，並寫成社群貼文
+"""
+
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser

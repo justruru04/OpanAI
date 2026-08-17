@@ -1,3 +1,7 @@
+"""
+利用 RunnableWithMessageHistory 進行記憶管理
+"""
+
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.output_parsers import StrOutputParser
@@ -14,11 +18,11 @@ parser = StrOutputParser()
 
 trimmer = trim_messages(
     max_tokens=1000,
-    strategy="last",          # 保留最新的對話訊息
-    token_counter=llm,        # 使用當前 LLM 來計算 Token 數量
-    include_system=True,      # 確保系統提示詞不會被修剪掉
-    allow_partial=False,      # 不切斷單則訊息
-    start_on="human",         # 修剪後的歷史開頭必須為人類訊息
+    strategy="last",          
+    token_counter=llm,        
+    include_system=True,      
+    allow_partial=False,      
+    start_on="human",         
 )
 
 # Prompt Template

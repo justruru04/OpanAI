@@ -1,3 +1,7 @@
+"""
+使用 moderation API 避免不當輸入
+"""
+
 from openai import OpenAI
 from tools import get_completion_from_messages, client
 import pandas as pd
